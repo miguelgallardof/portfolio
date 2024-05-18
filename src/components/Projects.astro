@@ -1,0 +1,123 @@
+---
+import ReactJS from "../icons/ReactJS.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import CSS from "../icons/CSS.astro";
+import HTML5 from "../icons/HTML5.astro";
+import Figma from "../icons/Figma.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+import WordPress from "../icons/WordPress.astro";
+import JavaScript from "../icons/JavaScript.astro";
+
+const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  CSS: {
+    name: "CSS",
+    icon: CSS,
+  },
+  FIGMA: {
+    name: "Figma",
+    icon: Figma,
+  },
+  HTML: {
+    name: "HTML5",
+    icon: HTML5,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    icon: JavaScript,
+  },
+  REACT: {
+    name: "React.js",
+    icon: ReactJS,
+  },
+  TAILWIND: {
+    name: "Tailwing",
+    icon: TailwindCSS,
+  },
+  WORDPRESS: {
+    name: "WordPress",
+    icon: WordPress,
+  },
+};
+
+const PROJECTS = [
+  {
+    image: "https://flowbite.com/docs/images/blog/image-1.jpg",
+    title: "Gales",
+    description:
+      "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
+    link: "#",
+    github: "#",
+    tags: [TAGS.ASTRO, TAGS.FIGMA, TAGS.HTML, TAGS.TAILWIND],
+  },
+  {
+    image:
+      "https://res.cloudinary.com/miguelgallardof/image/upload/v1715997932/siscog.pe_n8ihzg.webp",
+    title: "Siscog",
+    description:
+      "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
+    link: "https://siscog.pe/",
+    github: "#",
+    tags: [TAGS.WORDPRESS, TAGS.FIGMA, TAGS.JAVASCRIPT],
+  },
+];
+---
+
+<div class="grid grid-cols-2 gap-10">
+  {
+    PROJECTS.map(({ image, title, description, tags }) => (
+      <article
+        class="max-w-sm border border-gray-900 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        {...Astro.props}
+      >
+        <a href="#">
+          <img class="rounded-t-lg w-100%" src={image} alt="project image" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h3 class="mb-2 text-xl font-bold tracking-tight text-purple-900 dark:text-white">
+              {title}
+            </h3>
+          </a>
+          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-pretty">
+            {description}
+          </p>
+          <ul class="flex flex-row flex-wrap gap-y-1 pb-6">
+            {tags.map((tag) => (
+              <span class="flex gap-x-2 items-center font-medium me-2 rounded-lg px-2.5 py-1  text-sm bg-black/20 text-white/80">
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            ))}
+          </ul>
+          <div class="flex flex-row gap-x-2">
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
