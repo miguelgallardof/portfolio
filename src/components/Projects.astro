@@ -4,6 +4,7 @@ import AstroIcon from "../icons/AstroIcon.astro";
 import CSS from "../icons/CSS.astro";
 import HTML5 from "../icons/HTML5.astro";
 import Figma from "../icons/Figma.astro";
+import Npm from "../icons/Npm.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
 import WordPress from "../icons/WordPress.astro";
 import JavaScript from "../icons/JavaScript.astro";
@@ -17,6 +18,10 @@ const TAGS = {
     name: "CSS",
     icon: CSS,
   },
+  CSSMODULES: {
+    name: "CSS Modules",
+    icon: CSS,
+  },
   FIGMA: {
     name: "Figma",
     icon: Figma,
@@ -28,6 +33,10 @@ const TAGS = {
   JAVASCRIPT: {
     name: "JavaScript",
     icon: JavaScript,
+  },
+  NPM: {
+    name: "NPM",
+    icon: Npm,
   },
   REACT: {
     name: "React.js",
@@ -45,32 +54,40 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    image: "https://flowbite.com/docs/images/blog/image-1.jpg",
+    image: "/gales.webp",
     title: "Gales",
     description:
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
     link: "#",
     github: "#",
-    tags: [TAGS.ASTRO, TAGS.FIGMA, TAGS.HTML, TAGS.TAILWIND],
+    tags: [TAGS.FIGMA, TAGS.ASTRO, TAGS.HTML, TAGS.TAILWIND],
   },
   {
-    image:
-      "https://res.cloudinary.com/miguelgallardof/image/upload/v1715997932/siscog.pe_n8ihzg.webp",
+    image: "/siscog.webp",
     title: "Siscog",
     description:
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
     link: "https://siscog.pe/",
     github: "#",
-    tags: [TAGS.WORDPRESS, TAGS.FIGMA, TAGS.JAVASCRIPT],
+    tags: [TAGS.FIGMA, TAGS.WORDPRESS, TAGS.JAVASCRIPT],
+  },
+  {
+    image: "/torresc.webp",
+    title: "Siscog",
+    description:
+      "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
+    link: "https://siscog.pe/",
+    github: "#",
+    tags: [TAGS.NPM, TAGS.FIGMA, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSSMODULES],
   },
 ];
 ---
 
-<div class="grid grid-cols-2 gap-10">
+<div class="flex flex-col gap-10 justify-center items-center">
   {
     PROJECTS.map(({ image, title, description, tags }) => (
       <article
-        class="max-w-sm border border-gray-900 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-2xl border border-gray-900 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         {...Astro.props}
       >
         <a href="#">
