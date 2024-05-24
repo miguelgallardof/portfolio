@@ -1,18 +1,27 @@
 ---
 import ReactJS from "../icons/ReactJS.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
+import Bun from "../icons/Bun.astro";
 import CSS from "../icons/CSS.astro";
-import HTML5 from "../icons/HTML5.astro";
 import Figma from "../icons/Figma.astro";
+import HTML5 from "../icons/HTML5.astro";
+import JavaScript from "../icons/JavaScript.astro";
 import Npm from "../icons/Npm.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
+import Vite from "../icons/Vite.astro";
 import WordPress from "../icons/WordPress.astro";
-import JavaScript from "../icons/JavaScript.astro";
+import Yarn from "../icons/Yarn.astro";
+import Code from "../icons/Code.astro";
+import Link from "../icons/Link.astro";
 
 const TAGS = {
   ASTRO: {
     name: "Astro",
     icon: AstroIcon,
+  },
+  BUN: {
+    name: "Bun",
+    icon: Bun,
   },
   CSS: {
     name: "CSS",
@@ -46,9 +55,17 @@ const TAGS = {
     name: "Tailwing",
     icon: TailwindCSS,
   },
+  VITE: {
+    name: "Vite",
+    icon: Vite,
+  },
   WORDPRESS: {
     name: "WordPress",
     icon: WordPress,
+  },
+  YARN: {
+    name: "Yarn",
+    icon: Yarn,
   },
 };
 
@@ -58,9 +75,16 @@ const PROJECTS = [
     title: "Gales",
     description:
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
-    link: "#",
-    github: "#",
-    tags: [TAGS.FIGMA, TAGS.ASTRO, TAGS.HTML, TAGS.TAILWIND],
+    link: "https://gales.pe/",
+    code: "",
+    tags: [
+      TAGS.FIGMA,
+      TAGS.BUN,
+      TAGS.VITE,
+      TAGS.ASTRO,
+      TAGS.HTML,
+      TAGS.TAILWIND,
+    ],
   },
   {
     image: "/siscog.webp",
@@ -68,7 +92,7 @@ const PROJECTS = [
     description:
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
     link: "https://siscog.pe/",
-    github: "#",
+    code: "",
     tags: [TAGS.FIGMA, TAGS.WORDPRESS, TAGS.JAVASCRIPT],
   },
   {
@@ -76,16 +100,16 @@ const PROJECTS = [
     title: "Siscog",
     description:
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
-    link: "https://siscog.pe/",
-    github: "#",
-    tags: [TAGS.NPM, TAGS.FIGMA, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSSMODULES],
+    link: "https://torresc.netlify.app/",
+    code: "https://github.com/miguelgallardof/torresc",
+    tags: [TAGS.YARN, TAGS.FIGMA, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSSMODULES],
   },
 ];
 ---
 
 <div class="flex flex-col gap-10 justify-center items-center">
   {
-    PROJECTS.map(({ image, title, description, tags }) => (
+    PROJECTS.map(({ image, title, description, tags, link, code }) => (
       <article
         class="max-w-2xl border border-gray-900 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         {...Astro.props}
@@ -110,28 +134,15 @@ const PROJECTS = [
               </span>
             ))}
           </ul>
-          <div class="flex flex-row gap-x-2">
-            <a
-              href="#"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Read more
-              <svg
-                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
+          <div class="flex flex-row gap-x-6 items-center justify-end mb-2">
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <Link class="size-6 brightness-50 hover:scale-125 hover:brightness-100 transition-colors" />
             </a>
+            {code && (
+              <a href={code} target="_blank" rel="noopener noreferrer">
+                <Code class="size-6 brightness-50 hover:scale-125 hover:brightness-100 transition-colors" />
+              </a>
+            )}
           </div>
         </div>
       </article>
