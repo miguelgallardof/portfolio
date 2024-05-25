@@ -13,6 +13,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Rocket from "../icons/Rocket.astro";
 import Education from "../components/Education.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -25,8 +26,9 @@ import Education from "../components/Education.astro";
         class="flex flex-row gap-x-4 justify-center lg:justify-start items-center mb-4"
       >
         <img
-          class="rounded-full size-12"
+          loading="lazy"
           src="https://media-lim1-1.cdn.whatsapp.net/v/t61.24694-24/382424100_2373274502880395_5399792881446933749_n.jpg?ccb=11-4&oh=01_Q5AaIIQysycHbBtGYYUbGg9O6sy58eQCijZcbje9vwWAlSiz&oe=66526BF7&_nc_sid=e6ed6c&_nc_cat=108"
+          class="rounded-full size-12"
           alt="photo"
         /><a
           href="https://www.linkedin.com/in/miguelgallardof/"
@@ -97,5 +99,6 @@ import Education from "../components/Education.astro";
       </h2>
       <Education />
     </SectionContainer>
+    <!-- <Footer /> -->
   </main>
 </Layout>

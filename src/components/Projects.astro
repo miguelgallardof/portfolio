@@ -115,7 +115,12 @@ const PROJECTS = [
         {...Astro.props}
       >
         <a href="#">
-          <img class="rounded-t-lg w-100%" src={image} alt="project image" />
+          <img
+            loading="lazy"
+            class="rounded-t-lg w-100%"
+            src={image}
+            alt="project image"
+          />
         </a>
         <div class="p-5">
           <a href="#">
@@ -135,9 +140,22 @@ const PROJECTS = [
             ))}
           </ul>
           <div class="flex flex-row gap-x-6 items-center justify-end mb-2">
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={link}
+              data-tooltip-target="tooltip-default"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Link class="size-6 brightness-50 hover:scale-125 hover:brightness-100 transition-colors" />
             </a>
+            <div
+              id="tooltip-default"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            >
+              Visitar web
+              <div class="tooltip-arrow" data-popper-arrow />
+            </div>
             {code && (
               <a href={code} target="_blank" rel="noopener noreferrer">
                 <Code class="size-6 brightness-50 hover:scale-125 hover:brightness-100 transition-colors" />

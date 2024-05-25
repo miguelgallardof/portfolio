@@ -1,1 +1,31 @@
-<footer class="py-20">Footer</footer>
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+import Bun from "../icons/Bun.astro";
+import Heart from "../icons/Heart.astro";
+import HTML5 from "../icons/HTML5.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+import Vite from "../icons/Vite.astro";
+
+var today = new Date();
+var year = today.getFullYear();
+---
+
+<footer class="bg-white/80 rounded-3xl shadow m-8 dark:bg-gray-800 w-8/12">
+  <div
+    class="w-full mx-auto max-w-screen-xl px-6 py-4 md:flex md:items-center justify-between"
+  >
+    <span
+      class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex flex-row items-center"
+      >© {year}. Hecho con <Heart class="size-5 mx-1 fill-red-400" /> por <b
+        class="mx-1">Miguel</b
+      > con <nav class="flex ml-2 gap-x-2">
+        <Bun class="size-5" />
+        <Vite class="size-5" />
+        <AstroIcon class="size-5" />
+        <HTML5 class="size-5" />
+        <TailwindCSS class="size-5" />
+      </nav>
+    </span>
+    <nav></nav>
+  </div>
+</footer>
