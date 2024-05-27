@@ -3,21 +3,29 @@ import ReactJS from "../icons/ReactJS.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
 import Bun from "../icons/Bun.astro";
 import CSS from "../icons/CSS.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Code from "../icons/Code.astro";
 import Figma from "../icons/Figma.astro";
 import HTML5 from "../icons/HTML5.astro";
 import JavaScript from "../icons/JavaScript.astro";
+import Link from "../icons/Link.astro";
 import Npm from "../icons/Npm.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
+import Turbopack from "../icons/Turbopack.astro";
 import Vite from "../icons/Vite.astro";
 import WordPress from "../icons/WordPress.astro";
 import Yarn from "../icons/Yarn.astro";
-import Code from "../icons/Code.astro";
-import Link from "../icons/Link.astro";
+import Webpack from "../icons/Webpack.astro";
+import Pnpm from "../icons/Pnpm.astro";
 
 const TAGS = {
   ASTRO: {
     name: "Astro",
     icon: AstroIcon,
+  },
+  BOOSTRAP: {
+    name: "Bootstrap",
+    icon: Bootstrap,
   },
   BUN: {
     name: "Bun",
@@ -44,8 +52,12 @@ const TAGS = {
     icon: JavaScript,
   },
   NPM: {
-    name: "NPM",
+    name: "Npm",
     icon: Npm,
+  },
+  PNPM: {
+    name: "Pnpm",
+    icon: Pnpm,
   },
   REACT: {
     name: "React.js",
@@ -55,9 +67,17 @@ const TAGS = {
     name: "Tailwing",
     icon: TailwindCSS,
   },
+  TURBOPACK: {
+    name: "Turbopack",
+    icon: Turbopack,
+  },
   VITE: {
     name: "Vite",
     icon: Vite,
+  },
+  WEBPACK: {
+    name: "Webpack",
+    icon: Webpack,
   },
   WORDPRESS: {
     name: "WordPress",
@@ -79,8 +99,8 @@ const PROJECTS = [
     code: "",
     tags: [
       TAGS.FIGMA,
-      TAGS.BUN,
-      TAGS.VITE,
+      TAGS.PNPM,
+      TAGS.TURBOPACK,
       TAGS.ASTRO,
       TAGS.HTML,
       TAGS.TAILWIND,
@@ -102,7 +122,15 @@ const PROJECTS = [
       "Aqui hablo del proyecto Aqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyectoAqui hablo del proyecto",
     link: "https://torresc.netlify.app/",
     code: "https://github.com/miguelgallardof/torresc",
-    tags: [TAGS.YARN, TAGS.FIGMA, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSSMODULES],
+    tags: [
+      TAGS.FIGMA,
+      TAGS.NPM,
+      TAGS.WEBPACK,
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+      TAGS.CSSMODULES,
+      TAGS.BOOSTRAP,
+    ],
   },
 ];
 ---
