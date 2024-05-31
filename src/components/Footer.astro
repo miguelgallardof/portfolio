@@ -8,12 +8,22 @@ import TailwindCSS from "../icons/TailwindCSS.astro";
 const currentYear = new Date().getFullYear();
 ---
 
+<!-- ---
+import AstroIcon from "../icons/AstroIcon.astro";
+import Bun from "../icons/Bun.astro";
+import Heart from "../icons/Heart.astro";
+import HTML5 from "../icons/HTML5.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
 <footer class="bg-white/80 rounded-3xl shadow m-8 dark:bg-gray-800 w-8/12">
   <div
-    class="w-full mx-auto max-w-screen-xl px-6 py-4 md:flex md:items-center justify-center"
+    class="w-full mx-auto max-w-screen-xl px-6 py-4 md:flex md:items-center justify-between"
   >
     <span
-      class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex flex-row items-center"
+      class="text-gray-500 sm:text-center dark:text-gray-400 flex flex-row items-center text-base"
       ><strong class="mx-1">© {currentYear}.</strong> Hecho con <Heart
         class="size-5 mx-1 fill-red-400"
       /> por
@@ -24,5 +34,35 @@ const currentYear = new Date().getFullYear();
         <TailwindCSS class="size-5" />
       </nav>
     </span>
+    <nav></nav>
+  </div>
+</footer> -->
+<footer
+  class="opacity-80 m-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
+>
+  <div
+    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
+  >
+    <span
+      class="sm:text-center sm:justify-center text-zinc-800/90 dark:text-zinc-200/90 flex"
+      >© {currentYear} Hecho con <Heart class="size-5 mx-1 fill-red-500" /> por
+      <strong class="hover:underline mx-2">Miguel</strong> con
+      <Bun class="size-5 mx-1" />
+      <AstroIcon class="size-5 mx-1" />
+      <HTML5 class="size-5 mx-1" />
+      <TailwindCSS class="size-5 mx-1" />
+    </span>
+    <ul
+      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+    >
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline"
+          >Contacto</a
+        >
+      </li>
+    </ul>
   </div>
 </footer>
