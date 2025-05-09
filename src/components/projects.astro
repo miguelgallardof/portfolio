@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
-import moviesfordevs from "../../public/moviesfordevs.png";
+import gales from "../../public/gales.png";
+import siscog from "../../public/siscog.png";
+import torresc from "../../public/torresc.png";
 import tron from "../../public/tron.png";
 
 interface Project {
@@ -15,32 +16,32 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "MoviesForDevs",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://github.com/gothsec/MoviesForDevs",
-    preview: "https://movies-for-devs.vercel.app",
-    status: "On Development",
+    title: "Torres Construction",
+    image: torresc as ImageMetadata,
+    link: "https://github.com/miguelgallardof/torresc",
+    preview: "https://torresc.netlify.app",
+    status: "En actualización",
   },
   {
-    title: "StockIn",
-    image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "On Development",
+    title: "Grupo Siscog",
+    image: siscog as ImageMetadata,
+    link: "https://github.com/miguelgallardof/siscog",
+    preview: "https://siscog.pe",
+    status: "Desplegado",
+  },
+  {
+    title: "Gales",
+    image: gales as ImageMetadata,
+    link: "https://github.com/miguelgallardof?tab=repositories",
+    preview: "https://gales.pe",
+    status: "Desplegado",
   },
   {
     title: "Svgl.app",
     image: svgl as ImageMetadata,
     link: "https://github.com/pheralb/svgl",
     preview: "https://svgl.app",
-    status: "Contributor",
-  },
-  {
-    title: "Tron Legacy Web",
-    image: tron as ImageMetadata,
-    link: "https://github.com/Gothsec/Tron-Legacy-web",
-    preview: "https://tron-legacy-web.vercel.app/",
-    status: "Template (not official)",
+    status: "Contribuidor",
   },
 ];
 ---
@@ -50,8 +51,8 @@ const projects: Project[] = [
   class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Mi trabajo</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projectos</h3>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
@@ -117,11 +118,11 @@ const projects: Project[] = [
     </div>
     <a
       target="_blank"
-      href="https://github.com/Gothsec?tab=repositories"
+      href="https://github.com/miguelgallardof?tab=repositories"
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)] hover:scale-105"
     >
-      <span class="md:text-lg text-md">More projects on</span>
+      <span class="md:text-lg text-md">Más proyectos en</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
