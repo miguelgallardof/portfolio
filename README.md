@@ -59,7 +59,7 @@ src/
 ## **Local configuration** 
 1. Clone the repo:  
 ```
-git clone https://github.com/gothsec/portfolio
+git clone https://github.com/miguelgallardof/portfolio
 ```
 2. Install dependencies:
 ```  
