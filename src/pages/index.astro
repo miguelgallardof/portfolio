@@ -7,7 +7,20 @@ import Contact from "@/components/contact.astro";
 import Footer from "@/components/footer.astro";
 ---
 
-<Layout title="Miguel Gallardo">
+<script>
+  import { doc } from "firebase/firestore";
+
+  let previousTitle = document.title;
+  window.addEventListener("blur", () => {
+    previousTitle = document.title;
+    document.title = "¡Vuelve pronto! 😶‍🌫️";
+  });
+  window.addEventListener("focus", () => {
+    document.title = previousTitle;
+  });
+</script>
+
+<Layout title="Miguel Gallardo - Web Developer">
   <Nav />
   <Home />
   <Projects />
