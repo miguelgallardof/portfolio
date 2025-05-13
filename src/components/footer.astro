@@ -101,7 +101,7 @@ import LikeButton from "../React/LikeButton.tsx";
       <p class="text-center text-sm text-[var(--white-icon)] space-y-2">
         <!-- If you are using this template, by MIT License you can't remove the copyright notice -->
         <span class="block sm:inline"
-          >2025 | Hecho con ❤️ por <a
+          >2025 | Hecho con <span class="hearth">&#x2665;</span> por <a
             target="_blank"
             href="https://github.com/miguelgallardof">Miguel</a
           >.</span
@@ -110,3 +110,26 @@ import LikeButton from "../React/LikeButton.tsx";
     </div>
   </div>
 </footer>
+
+<style>
+  .hearth {
+    color: red;
+    /* Animating heart */
+    animation: pulse 2s linear infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+</style>
