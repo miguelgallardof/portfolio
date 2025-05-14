@@ -59,7 +59,7 @@ src/
 ## **Local configuration** 
 1. Clone the repo:  
 ```
-git clone https://github.com/miguelgallardof/portfolio
+git clone https://github.com/miguelogf/portfolio
 ```
 2. Install dependencies:
 ```  
